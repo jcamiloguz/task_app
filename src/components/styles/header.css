@@ -1,0 +1,41 @@
+.Header__container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary);
+  height: 90px;
+}
+.Header {
+  max-width: 1100px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+.Header__Navbar ul {
+  list-style: none;
+  display: flex;
+}
+.Header__Navbar li {
+  color: var(--white);
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.Header__Navbar li:hover {
+  color: var(--secundary);
+}
+.Header__Logo {
+  background-image: url('../../img/mainlogo.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 200px;
+  transition: 0.2s;
+}
+.Header__Logo:hover {
+  background-image: url('../../img/mainlogoact.png');
+}
