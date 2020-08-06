@@ -3,6 +3,7 @@
   justify-content: center;
   background-color: var(--primary);
   height: 90px;
+  box-shadow: 0px 1px 15px #797979;
 }
 .Header {
   max-width: 1100px;
@@ -17,14 +18,15 @@
   list-style: none;
   display: flex;
 }
-.Header__Navbar li {
+.link {
+  text-decoration: none;
   color: var(--white);
   margin-left: 1rem;
   font-size: 1.8rem;
   cursor: pointer;
   transition: 0.2s;
 }
-.Header__Navbar li:hover {
+.link:hover {
   color: var(--secundary);
 }
 .Header__Logo {
