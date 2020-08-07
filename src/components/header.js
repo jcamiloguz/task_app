@@ -8,11 +8,11 @@ export default function Header() {
         <div className="Header__Logo"></div>
         <div className="Header__Navbar">
           <ul>
-            <li>
+            {/* <li>
               <Link className="link" to="/">
                 Home
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link className="link" to="/tasks/">
                 Tasks

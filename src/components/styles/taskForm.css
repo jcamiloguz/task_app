@@ -1,0 +1,45 @@
+.task__form {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 1px 20px 20px 20px;
+  background-color: var(--complementary);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px #797979;
+}
+form {
+}
+label {
+  font-size: 1.3rem;
+  display: block;
+  border-bottom: 2px solid var(--secundary);
+  width: 200px;
+  margin-bottom: 10px;
+}
+input {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+input:hover {
+  border: 1px solid var(--primary);
+}
+.new__button {
+  background-color: var(--primary);
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: var(--complementary);
+  box-shadow: 0px 2px 5px #797979;
+  border-radius: 5px;
+  font-family: 'Lato';
+  font-weight: bold;
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.new__button:hover {
+  box-shadow: 0px 5px 10px #797979;
+  color: var(--secundary);
+}
