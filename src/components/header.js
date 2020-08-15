@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from '@reach/router'
 import './styles/header.css'
 export default function Header() {
   return (
@@ -19,7 +19,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link className="link" to="/about/">
+              <Link className="link" to="/">
                 About
               </Link>
             </li>

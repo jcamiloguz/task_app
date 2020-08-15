@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from '@reach/router'
 import Task from '../components/task'
 import './styles/tasks.css'
 export default function Tasks() {

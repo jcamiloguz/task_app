@@ -26,6 +26,9 @@
   cursor: pointer;
   transition: 0.2s;
 }
+.link[aria-current] {
+  color: var(--secundary);
+}
 .link:hover {
   color: var(--secundary);
 }

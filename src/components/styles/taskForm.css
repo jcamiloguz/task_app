@@ -24,7 +24,6 @@ input {
   padding: 0 10px;
 }
 input:hover {
-  border: 1px solid var(--primary);
 }
 .new__button {
   background-color: var(--primary);
