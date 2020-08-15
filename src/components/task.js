@@ -1,7 +1,6 @@
 import React from 'react'
 import './styles/task.css'
-export default function Task(props) {
-  const data = props.data.data
+export default function Task({ data }) {
   return (
     <div className="task">
       <div className="task__check">
