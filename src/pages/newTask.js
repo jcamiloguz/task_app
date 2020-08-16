@@ -1,9 +1,10 @@
 import React from 'react'
-import TaskForm from '../components/taskForm'
+import { TaskForm } from '../components/taskForm'
+
 export default function NewTask() {
   return (
     <div className="newTask__container">
-      <TaskForm path></TaskForm>
+      <TaskForm></TaskForm>
     </div>
   )
 }

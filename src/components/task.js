@@ -9,9 +9,9 @@ export default function Task({ data }) {
       <div className="task__info">
         <h2>{data.titleT}</h2>
         <div className="task__line"></div>
-        <p>Description</p>
-        <p>Time</p>
-        <p>{data.whereT}</p>
+        <p>Description: {data.descriptionT}</p>
+        <p>Time: {data.timeT}</p>
+        <p>Place: {data.whereT}</p>
       </div>
     </div>
   )
