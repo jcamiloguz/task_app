@@ -5,6 +5,7 @@ import About from './pages/about'
 import NewTask from './pages/newTask'
 import { Router } from '@reach/router'
 
+window.localStorage.clear()
 export default function App() {
   return (
     <Layout>

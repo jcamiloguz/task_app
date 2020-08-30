@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { navigate } from '@reach/router'
-import { Link } from '@reach/router'
 import './styles/taskForm.css'
 export class TaskForm extends Component {
   state = {
@@ -12,13 +11,15 @@ export class TaskForm extends Component {
   }
   handleClick = (e) => {
     e.preventDefault()
-    let id = this.state.taskId + 1
-    this.setState({
+    let count = window.localStorage.length
+    let id = count
+    let data = {
       ...this.state,
       taskId: id,
-    })
-    const valueJSON = JSON.stringify(this.state)
-    window.localStorage.setItem(`Value${this.state.taskId}`, valueJSON)
+    }
+    console.log(data)
+    const valueJSON = JSON.stringify(data)
+    window.localStorage.setItem(`Value${data.taskId}`, valueJSON)
     navigate(`/tasks`)
   }
   handleChange = (e) => {
@@ -28,7 +29,7 @@ export class TaskForm extends Component {
     return (
       <div className="task__form">
         <h1>New Task</h1>
-        <form>
+        <form onSubmit={this.handleClick}>
           <div className="form__group">
             <label htmlFor="">Task's Title</label>
             <input
@@ -69,11 +70,7 @@ export class TaskForm extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <Link to="/tasks/new">
-            <button onClick={this.handleClick} className="new__button">
-              Create
-            </button>
-          </Link>
+          <button className="new__button">Create</button>
         </form>
       </div>
     )

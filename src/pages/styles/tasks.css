@@ -1,5 +1,6 @@
-.task__contanier {
+.tasks__container {
   width: 100%;
+  margin-bottom: 150px;
 }
 .task__create {
   width: 95%;

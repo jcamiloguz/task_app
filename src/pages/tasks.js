@@ -15,7 +15,19 @@ export default function Tasks() {
       allTasks.push(data)
     }
     setTasks(allTasks)
-  }, [setTasks])
+  }, [])
+
+  const remove = () => {
+    const allTasks = []
+    const keys = Object.keys(localStorage)
+    let i = keys.length
+    while (i--) {
+      let data = window.localStorage.getItem(keys[i])
+      data = JSON.parse(data)
+      allTasks.push(data)
+    }
+    setTasks(allTasks)
+  }
   return (
     <div className="tasks__container">
       <div className="task__create">
@@ -23,7 +35,7 @@ export default function Tasks() {
           <button className="create__button">Create New Task</button>
         </Link>
       </div>
-      <ListOfTasks tasks={tasks} />
+      <ListOfTasks tasks={tasks} remove={remove} />
     </div>
   )
 }
