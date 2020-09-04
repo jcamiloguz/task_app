@@ -4,6 +4,7 @@ import { ListOfTasks } from '../components/ListOfTasks'
 import './styles/tasks.css'
 export default function Tasks() {
 	const [tasks, setTasks] = useState([])
+	const [update, setUpdate] = useState(false)
 
 	useEffect(() => {
 		let allTasks = []
@@ -12,18 +13,10 @@ export default function Tasks() {
 		allTasks = (data) ? data.tasks : []
 		setTasks(allTasks)
 		console.log(allTasks)
-	}, [])
-
+		setUpdate(true)
+	}, [update])
 	const remove = () => {
-		const allTasks = []
-		const keys = Object.keys(localStorage)
-		let i = keys.length
-		while (i--) {
-			let data = window.localStorage.getItem(keys[i])
-			data = JSON.parse(data)
-			allTasks.push(data)
-		}
-		setTasks(allTasks)
+		setUpdate(false)
 	}
 	return (
 		<div className="tasks__container">

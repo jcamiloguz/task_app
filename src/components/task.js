@@ -1,9 +1,19 @@
 import React from 'react'
 import './styles/task.css'
 import { FaCheck } from 'react-icons/fa'
-export default function Task({ data, remove }) {
-	const handleClick = () => {
+export default function Task({ data }) {
+	const handleClick = async () => {
+		let allTasks = window.localStorage.getItem('value')
+		allTasks = await JSON.parse(allTasks)
+		console.log(allTasks)
+		allTasks = allTasks.tasks.map((task) => (JSON.parse(task)))
+		const index = allTasks.findIndex((task) => (task.taskId === data.taskId))
+		allTasks.splice(index, 1)
+		allTasks = { tasks: allTasks }
+		allTasks = JSON.stringify(allTasks)
+		window.localStorage.setItem('value', allTasks)
 	}
+
 	return (
 		<div className="task">
 			<div className="task__check">
